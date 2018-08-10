@@ -1,0 +1,15 @@
+#import os and csv tools
+import os
+import csv
+
+#set column_sum variable (used to calculate total later as zero)
+tradesum = 0
+#set input_path as budget data file filepth
+input_path = os.path.join('budget_data.csv')
+#open data file in location below, read it, store data as f
+with open(input_path, "r") as f:
+# read f as csv file with delimiter , and store that data as reader
+    reader = csv.reader(f, delimiter=",")
+# skip headers
+
+    next(reader)
